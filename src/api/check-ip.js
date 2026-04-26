@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     `https://api.abuseipdb.com/api/v2/check?ipAddress=${ip}&maxAgeInDays=90`,
     {
       headers: {
-        'Key': process.env.VITE_ABUSEIPDB_KEY,
+        'Key': process.env.ABUSEIPDB_KEY,
         'Accept': 'application/json',
       },
     }
