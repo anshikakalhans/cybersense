@@ -7,13 +7,4 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  server: {
-    proxy: {
-      '/abuseipdb': {
-        target: 'https://api.abuseipdb.com',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/abuseipdb/, ''),
-      },
-    },
-  },
 })
