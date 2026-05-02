@@ -38,7 +38,7 @@ function SearchPage() {
         const data = await checkIP(query);
         setResult(data.data);
         const saved = JSON.parse(localStorage.getItem("searchHistory") || "[]");
-        if (!saved.includes(query)) {
+        if (!saved.includes(query) && query.length >= 7) {
           const updated = [query, ...saved].slice(0, 10);
           saveHistory(updated);
         }
